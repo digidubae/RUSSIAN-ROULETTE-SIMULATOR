@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Russian Roulette Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bokor&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+    </div>
+    <div class="game-container" style="display: none;">
+        <h1>RUSSIAN ROULETTE SIMULATOR</h1>
+        <div class="revolver-container">
+            <div class="cylinder">
+                <div class="chamber"></div>
+                <div class="chamber"></div>
+                <div class="chamber"></div>
+                <div class="chamber"></div>
+                <div class="chamber"></div>
+                <div class="chamber"></div>
+            </div>
+            <div class="barrel"></div>
+        </div>
+        <div class="controls">
+            <button id="spinBtn">SPIN CYLINDER</button>
+            <button id="triggerBtn">PULL TRIGGER</button>
+        </div>
+        <div class="stats">
+            <p>Attempts: <span id="attempts">0</span>/6</p>
+        </div>
+    </div>
+    <div id="gameOver" class="modal">
+        <div class="modal-content">
+            <h2>GAME OVER</h2>
+            <p>You didn't make it...</p>
+            <button id="restartBtn">Play Again</button>
+        </div>
+    </div>
+    <div id="winner" class="modal">
+        <div class="modal-content">
+            <h2>YOU SURVIVED!</h2>
+            <p>You've got nerves of steel!</p>
+            <button id="newGameBtn">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
